@@ -4,6 +4,15 @@ import cv2
 from ultralytics import YOLO
 
 def run_inference(image_path: str, model_name: str = 'yolov8n.pt') -> None:
+    """
+    Runs inference on a single image using a pre-trained YOLOv8 model,
+    draws the bounding boxes, and displays the result.
+
+    Args:
+        image_path (str): The path to the input image.
+        model_name (str, optional): The name of the pre-trained YOLO model. 
+                                    Defaults to 'yolov8n.pt'.
+    """
 
     # Load the pre-trained YOLOv8 model
     print(f"Loading model: {model_name}...")
